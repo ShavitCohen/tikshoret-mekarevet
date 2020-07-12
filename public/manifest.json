@@ -3,7 +3,8 @@
   "short_name": "תקשורת מקרבת",
   "theme_color": "#f3bf21",
   "background_color": "#f9f9f9",
-  "display": "browser",
+  "display": "fullscreen",
+  "prefer_related_applications": "true",
   "Scope": "/",
   "start_url": "/",
   "icons": [

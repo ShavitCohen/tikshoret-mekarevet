@@ -2,7 +2,7 @@ const feelings = {
   title: 'רגשות',
   items: [
     {
-      title: 'רגשות שצרכים לא נענים',
+      title: 'רגשות כשצרכים לא נענים',
       items: [
         {
           title: 'פחד',
@@ -91,7 +91,7 @@ const feelings = {
       ],
     },
     {
-      title: 'רגשות שצרכים נענים',
+      title: 'רגשות כשצרכים נענים',
       items: [
         {
           title: 'שלווה',
