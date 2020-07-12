@@ -25,7 +25,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <>
       <AppBar
         onFeelingsButtonClick={handleFeelingsButtonClick}
         onNeedsButtonClick={handleNeedsButtonClick}
@@ -40,7 +40,9 @@ const App = () => {
           content={content}
         />
       )}
-    </div>
+
+      <footer className="footer">שביט כהן, 2020</footer>
+    </>
   );
 };
 
