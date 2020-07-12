@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import AppBar from './components/AppBar';
+import Dialog from './components/Dialog';
+import HomePage from './components/HomePage';
+import feelings from './content/feelings';
+import needs from './content/needs';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [content, setContent] = useState(null);
+
+  const handleFeelingsButtonClick = () => {
+    setContent(feelings);
+    setDialogOpen(true);
+  };
+
+  const handleNeedsButtonClick = () => {
+    setContent(needs);
+    setDialogOpen(true);
+  };
+
+  const handleDialogClose = () => {
+    setDialogOpen(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppBar
+        onFeelingsButtonClick={handleFeelingsButtonClick}
+        onNeedsButtonClick={handleNeedsButtonClick}
+      />
+
+      <HomePage />
+
+      {content && (
+        <Dialog
+          open={dialogOpen}
+          onClose={handleDialogClose}
+          content={content}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default App;
