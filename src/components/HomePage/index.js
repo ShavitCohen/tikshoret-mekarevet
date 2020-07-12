@@ -15,7 +15,7 @@ import './homePage.css';
 const HomePage = () => (
   <div>
     <div className="imageWrapper">
-      <h3>מדריך עזר ל לג׳ירפה המתחיל</h3>
+      <h3>מדריך עזר לג׳ירפה המתחיל</h3>
       <img src="/images/icons/icon-192x192.png" alt="Baby Giraffe" />
     </div>
     <div>
