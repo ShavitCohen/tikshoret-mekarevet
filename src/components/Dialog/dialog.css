@@ -1,0 +1,10 @@
+.dialog-footer {
+  top: auto !important;
+  bottom: 0;
+  text-align: center;
+  display: block !important;
+}
+.dialog-footer a {
+  text-decoration: none;
+  color: #c38930;
+}

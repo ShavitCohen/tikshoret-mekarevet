@@ -22,6 +22,8 @@ import {
   ExpandMore as ExpandMoreIcon,
 } from '@material-ui/icons';
 
+import './dialog.css';
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -85,6 +87,17 @@ export default function FullScreenDialog({open, onClose, content}) {
           </AccordionDetails>
         </Accordion>
       ))}
+      <AppBar color="primary" className="dialog-footer">
+        תודה{' '}
+        <a
+          href="https://az.ravpage.co.il/michaelfinkel?fbclid=IwAR0DO3CHhk8zZXYRqnFmy-3ru5Ypo0dkuQwNMlYgIMZEpTPd99lkbvR64vM"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          למיכאל פינקל
+        </a>{' '}
+        על הארגון והסיווג
+      </AppBar>
     </Dialog>
   );
 }
